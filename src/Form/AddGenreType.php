@@ -6,6 +6,7 @@ use App\Entity\Genre;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class AddGenreType extends AbstractType
 {
@@ -13,6 +14,7 @@ class AddGenreType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('save', SubmitType::class)
         ;
     }
 

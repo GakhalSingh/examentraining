@@ -97,9 +97,7 @@ class ViewController extends AbstractController
     #[Route('/library/upload/genre', name: 'create_genre')]
     public function createGenre(EntityManagerInterface $entityManager, Request $request): Response
     {
-        // just set up a fresh $task object (remove the example data)
         $genre = new Genre();
-
         $form = $this->createForm(AddGenreType::class, $genre);
 
         $form->handleRequest($request);
